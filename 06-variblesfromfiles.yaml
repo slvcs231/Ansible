@@ -1,6 +1,6 @@
 - name: print variables from files
   hosts: frontend
-  become: yes
+  connection: local
   vars_files:
   - course.yaml
   tasks:
