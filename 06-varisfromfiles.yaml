@@ -1,11 +1,9 @@
-- name: print variables from files
+- name: print course from files
   hosts: frontend
   connection: local
   vars_files:
   - course.yaml
   tasks:
-  - name: print the course info
+  - name: print course from files
     ansible.builtin.debug:
-      msg: "Course Name is: {{COURSE}}, Duration: {{DURATION}}, Trainer: {{TRAINER}}"
-      
-
+      msg: "course name is {{ COURSE }}, Duration {{ DURATION }}, Trainer is {{ TRAINER }}"
